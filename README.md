@@ -5,7 +5,7 @@
 Shoutr, es una Web App para la comunidad LGTBI que producto de la represión y falta de respeto de la sociedad en la que viven, no pueden expresarse libremente. Shoutr, los ayuda a encriptar mensajes y así comunicarse de forma segura.Shoutr es practica e intuitiva,  discreta y segura.
 
 
-**Investigación UX:**
+## **Investigación UX:**
 
 ***¿Quiénes usan Shoutr?***
 
