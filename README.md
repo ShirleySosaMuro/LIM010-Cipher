@@ -25,11 +25,24 @@ Por ejemplo, si eres un adolescente gay y tus padres tienen control sobre tu cel
 ![enter image description here](https://lh3.googleusercontent.com/ap3uB6YVjVMiJ6VkvoPURQ7BynYeLfIOkps4icgQ40SVgzwtlv15ZXnHQincyCzkblshQBpJ6HBv8A "Prototipo Baja Fidelidad")
 
 ***Feedback***
-En mi squad recibí  comentarios positivos sobre la plataforma, como que era bueno que sea minimalista, pero que debía agregar o especificar lo siguiente:
+En mi squad recibí  comentarios positivos sobre mi web app, les agradó el hecho de que sea "minimalista", sin embargo sugirieron que sea más específica en algunos aspectos como los siguiente:
 
  - Botón para volver a utilizar la app.
  - Agregar texto  al botón con las opciones posibles.
- - Definir si el botón volver regresa a la pantalla principal o al menú de opciones: crifar o descifrar.
+ -  Definir si el botón volver regresa a la pantalla principal o al menú de opciones: crifar o descifrar.
+
+Por otro lado, tuve la oportunidad de testear con un posible usuario, y recibí recomendaciones de estilo y funcionamiento. También indicó que le gustaría usarla.
 
 ***Prototipo final en Balsamiq***
+Luego de varias pruebas y reproceso, el prototipo final de Shoutr será el siguiente:
 
+![enter image description here](https://lh3.googleusercontent.com/RbzEpLU6JAT7z3W669HM5P5dsTW7ZsZFG3hGsJsXPu_6JMNy98qncOEuHnalqjmr1Ud7V-YI56le5Q "Primer página")
+
+
+![enter image description here](https://lh3.googleusercontent.com/g575OaPj1AuxmRA4-WopanYoWfSDQLRor3lCYjzLvTVgHqG1hXT_DpaIhxpxuRb2UTz7xDfCbvdslQ "Primer Página con mensaje de error")
+
+![enter image description here](https://lh3.googleusercontent.com/5qN_QJXx-jkzqrlvC4zyom_SsfLjK1Ae5HsTAelDlJc5b0ZumNswh3XFbqQn_UlXIS-skQqv7mPWkA)
+
+![enter image description here](https://lh3.googleusercontent.com/cBA17CGKdCf-pN5_wMS_hVSwqYdXISXuINp93Xs3uKbVU5v_B1WIleB9uxnJGV1TDwpKrmTmxtaHPQ)
+
+![enter image description here](https://lh3.googleusercontent.com/yWHqx009Hvr4q_oM-3y0TcDBsYIcpDBVm7XeVXrs9jokHjvDGbBBBiorJBfsIZsO6zuBoIONA17JMA)
