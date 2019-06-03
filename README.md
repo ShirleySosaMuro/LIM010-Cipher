@@ -27,9 +27,9 @@ Por ejemplo, si eres un adolescente gay y tus padres tienen control sobre tu cel
 ***Feedback***
 En mi squad recibí  comentarios positivos sobre mi web app, les agradó el hecho de que sea "minimalista", sin embargo sugirieron que sea más específica en algunos aspectos como los siguiente:
 
- - Botón para volver a utilizar la app.
- - Agregar texto  al botón con las opciones posibles.
- -  Definir si el botón volver regresa a la pantalla principal o al menú de opciones: crifar o descifrar.
+ - Agregar un botón para volver a utilizar la app.
+ - Agregar nombres a los botones, así el usuario sabe qué hacer.
+ - Definir si el botón volver regresa a la pantalla principal o al menú de opciones: crifar o descifrar.En este caso opte para que   regrese a la pantalla de login, el usuario vuelva a escribir la clave secreta (password) por temas de extrema seguridad.
 
 Por otro lado, tuve la oportunidad de testear con un posible usuario, y recibí recomendaciones de estilo y funcionamiento. También indicó que le gustaría usarla.
 
