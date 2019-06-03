@@ -34,6 +34,7 @@ En mi squad recibí  comentarios positivos sobre mi web app, les agradó el hech
 Por otro lado, tuve la oportunidad de testear con un posible usuario, y recibí recomendaciones de estilo y funcionamiento. También indicó que le gustaría usarla.
 
 ***Prototipo final en Balsamiq***
+
 Luego de varias pruebas y reproceso, el prototipo final de Shoutr será el siguiente:
 
 ![enter image description here](https://lh3.googleusercontent.com/RbzEpLU6JAT7z3W669HM5P5dsTW7ZsZFG3hGsJsXPu_6JMNy98qncOEuHnalqjmr1Ud7V-YI56le5Q "Primer página")
