@@ -1,15 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang='en' dir='ltr'>
   <head>
-    <meta charset="utf-8">
-    <title>Caesar Cipher</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset='UTF-8' />
+    <!--fondo de pantalla-->
+    <link
+      rel='icon'
+      type='image/jpg'
+      href='C:\Users\Lenovo\Downloads\git\cipher\LIM010-Cipher\src\media\favicon-20190602095644450.ico'
+    />
+    <title>Shoutr.com</title>
+    <meta name='viewport' content='width=device-width', initial-scale=1.0 />
+    <meta http-equiv='X-UA-Compatible' content='ie=edge' />
+    <link rel='stylesheet' href='style.css'>
   </head>
   <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-    <script src="cipher.js"></script>
-    <script src="index.js"></script>
+    <main> 
+      <!--Página de Login -->     
+     <section id='login'>
+        <input type='password' placeholder= '🦄 Palabra secreta' id='secret' class='input-48'/>
+        <button type='submit' id='boton_entrar' class='btn-primary' > entrar </button>
+     </section>
+    </form>
+    </main>
+
+    <main>
+      <!--Página de Acciones:Cifrar o descifrar-->
+       <section id='queHacer' class='hide'>
+            <h1>¿Qué quieres hacer?</h1>
+            <!--ELegir que quiero hacer en la web app-->
+            <button name='cifrar' type='button' id='hideButton' class='btn-primary'>
+              Ocultar
+            </button>
+            <button
+              name='descifrar'  type='button' id='discoverButton' class='btn-success'>
+              revelar
+            </button>
+            <br /><br />
+        </section>
+      <!--Página de Acción: Cifrar o descifrar-->
+    </main>
+    <main>
+    <section id='writeMessage'class='hide'>
+      <input type='text' id='' placeholder='Escribe tu secreto' />
+      <br>
+      <input type='number' min='1' max='26'>
+
+      </select>
+      <button name='tema1' type='button' id='codificar' class='btn-primary'>
+        Enviar
+      </button>
+    </section>
+    </main>
+    <!--Página de Resultados -->
+    <main>
+    <section id='textoResultado'class='hide'>
+    <input  type='text'  id='cajaConResultado' value='PRUEBA'/>
+    
+    <button id='copyText' class='btn-primary'>
+      Copiar
+    </button>
+    <button id='borrarTexto' class='btn-success'>
+      Olvidar
+    </button>
+    </main>
+  </section>
+    <footer>
+      <p>Creado por Juntas.xyz </p>
+    </footer>
+    <script type='text/javascript' src='index.js'></script>
   </body>
 </html>
