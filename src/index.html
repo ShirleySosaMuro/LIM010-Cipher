@@ -33,7 +33,7 @@
               name='descifrar'  type='button' id='opcionDescifrar' class='btn-success'> revelar </button>
             <br /><br />
         </section>
-        <p id='mensajeErrorError'> Creemos que no eres tú. Inténtalo más tarde.</p>  
+        
 
       <!--segunda pantalla que te permite CIFRAR-->
     </main>
@@ -44,21 +44,21 @@
       <br>
       <input type='number' min='1' max='26'id='desplazamiento1'/>
       </select>
-      <button  type='button' id='enviarACifrar' class='btn-primary'>  ocultar </button>
+      <button  type='button' id='cifrarTexto' class='btn-primary'>  enviar </button>
     </section>
     </main>
   </main>
   <main>
   <section id='segundaPantallaOpcionDescifrar'class='hide'>
     <!--caja de texto de mensaje a Cifrar-->
-    <input type='text' id='mensajeADescifrar' placeholder='revela el secreto' />
+    <input type='text' id='descifrarTextor' placeholder='revela el secreto' />
     <br>
     <input type='number' min='1' max='26'id='desplazamiento2'/>
      </select>
-    <button  type='button' id='enviarADescifrar' class='btn-primary'>  revelar  </button>
+    <button  type='button' id='enviarADescifrar' class='btn-primary'>  enviar </button>
   </section>
   </main>
-    <!--Página de Resultados -->
+    <!--Pantalla con los resultados y los botones de copiar y olvidar (lleva a login y borra datos) -->
     <main>
     <section id='terceraPantallaResultados'class='hide'>
     <input type='text'  id='cajaResultado'/>    

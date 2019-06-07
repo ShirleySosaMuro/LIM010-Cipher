@@ -6,6 +6,8 @@ const segundaPantallaDescifrar = document.getElementById('segundaPantallaOpcionD
 const terceraPantallaResultadoFinal = document.getElementById('terceraPantallaResultados');
 const resultadoFinal=document.getElementById('enviarACifrar');
 
+
+
 //evento de login y verificación de clave//
 const pantallaInicio = document.getElementById('login');
 let nroIntentos = 0;
@@ -42,11 +44,10 @@ opcionCifrar.addEventListener('click', () => {
   segundaPantallaCifrar.classList.replace('hide', 'show');
 });
 //¡NO ME SALE!dar click en botón REVELAR y te mande a segundaPantallaDescifrar   //
-const botonDescifrar = document.getElementById('opcionDescifrar');
-opcionDescifrar.addEventListener('click', () => {
-  primeraPantalla.classList.add('hide');
-  segundaPantallaDesCifrar.classList.replace('hide','show');
-});
+//const botonDescifrar = document.getElementById('opcionDescifrar');
+//opcionDescifrar.addEventListener('click', () => {
+  //primeraPantalla.classList.add('hide');
+  //segundaPantallaDesCifrar.classList.replace('hide','show');
 //dar click en botón enviarDESCIFRAR y te lleve a la pantalla final con el resultado  
 //const botonEnviarDescifrar = document.getElementById('enviarADescifrar');
   //enviarADescifrar.addEventListener('click', () => {
@@ -54,11 +55,16 @@ opcionDescifrar.addEventListener('click', () => {
   //terceraPantallaResultados.classList.replace('hide', 'show')//
 
   // CODIGO CIFRAR //
-  const resultadoCifrar= document.getElementById('enviarACifrar');
-  enviarACifrar.addEventListener('click', () => {
-  const mensajeCifrado = window.cipher.encode(textoParaCifrar.value,desplazamiento1.value);
-  cajaResultado.value = mensajeCifrado;  
-  });
+
+
+
+
+ const cifrarFinal = document.getElementById('cifrarTexto');
+  cifrarFinal.addEventListener('click', ()=> {
+  const mensajeCifrado= window.cipher.encode(desplazamiento1.value,textoParaCifrar.value);
+ 
+ })
+ 
 //(funcion de copiar texto AUN NO ME SALE//
 
 
