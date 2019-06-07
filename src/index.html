@@ -6,7 +6,7 @@
     <link
       rel='icon'
       type='image/jpg'
-      href='C:\Users\Lenovo\Downloads\git\cipher\LIM010-Cipher\src\media\favicon-20190602095644450.ico'
+      href='C:\Users\Lenovo\Downloads\git\cipher\LIM010-Cipher\src\media\\favicon_tittle.ico'
     />
     <title>Shoutr.com</title>
     <meta name='viewport' content='width=device-width', initial-scale=1.0 />
@@ -15,58 +15,61 @@
   </head>
   <body>
     <main> 
-      <!--Página de Login -->     
+      <!--Pantalla de Login  -->     
      <section id='login'>
-        <input type='password' placeholder= '🦄 Palabra secreta' id='secret' class='input-48'/>
-        <button type='submit' id='boton_entrar' class='btn-primary' > entrar </button>
+        <input type='password' placeholder= '🦄 Palabra secreta' id='palabraSecreta' class='input-48'/>
+        <button type='submit' id='botonEntrar' class='btn-primary' > entrar </button>
      </section>
     </form>
     </main>
 
     <main>
       <!--Página de Acciones:Cifrar o descifrar-->
-       <section id='queHacer' class='hide'>
+       <section id='primeraPantallaOpciones' class='hide'>
             <h1>¿Qué quieres hacer?</h1>
             <!--ELegir que quiero hacer en la web app-->
-            <button name='cifrar' type='button' id='hideButton' class='btn-primary'>
-              Ocultar
-            </button>
+            <button name='cifrar' type='button' id='opcionCifrar' class='btn-primary'> ocultar  </button>
             <button
-              name='descifrar'  type='button' id='discoverButton' class='btn-success'>
-              revelar
-            </button>
+              name='descifrar'  type='button' id='opcionDescifrar' class='btn-success'> revelar </button>
             <br /><br />
         </section>
-      <!--Página de Acción: Cifrar o descifrar-->
+        <p id='mensajeErrorError'> Creemos que no eres tú. Inténtalo más tarde.</p>  
+
+      <!--segunda pantalla que te permite CIFRAR-->
     </main>
     <main>
-    <section id='writeMessage'class='hide'>
-      <input type='text' id='' placeholder='Escribe tu secreto' />
+    <section id='segundaPantallaOpcionCifrar'class='hide'>
+     <!--caja de texto de mensaje a Cifrar-->
+      <input type='text' id='textoParaCifrar' placeholder='escribe tu secreto'/>
       <br>
-      <input type='number' min='1' max='26'>
-
+      <input type='number' min='1' max='26'id='desplazamiento1'/>
       </select>
-      <button name='tema1' type='button' id='codificar' class='btn-primary'>
-        Enviar
-      </button>
+      <button  type='button' id='enviarACifrar' class='btn-primary'>  ocultar </button>
     </section>
     </main>
+  </main>
+  <main>
+  <section id='segundaPantallaOpcionDescifrar'class='hide'>
+    <!--caja de texto de mensaje a Cifrar-->
+    <input type='text' id='mensajeADescifrar' placeholder='revela el secreto' />
+    <br>
+    <input type='number' min='1' max='26'id='desplazamiento2'/>
+     </select>
+    <button  type='button' id='enviarADescifrar' class='btn-primary'>  revelar  </button>
+  </section>
+  </main>
     <!--Página de Resultados -->
     <main>
-    <section id='textoResultado'class='hide'>
-    <input  type='text'  id='cajaConResultado' value='PRUEBA'/>
-    
-    <button id='copyText' class='btn-primary'>
-      Copiar
-    </button>
-    <button id='borrarTexto' class='btn-success'>
-      Olvidar
-    </button>
+    <section id='terceraPantallaResultados'class='hide'>
+    <input type='text'  id='cajaResultado'/>    
+    <button id='copyText' class='btn-primary'> Copiar  </button>
+    <button id='regresarLogin' class='btn-success'>  Olvidar </button>
     </main>
   </section>
     <footer>
-      <p>Creado por Juntas.xyz </p>
+      <p>Creado por Shirley Sosa </p>
     </footer>
     <script type='text/javascript' src='index.js'></script>
+    <script src="cipher.js"></script>
   </body>
 </html>

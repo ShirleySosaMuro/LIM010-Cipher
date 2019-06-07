@@ -1,7 +1,12 @@
 /* Acá van tus reglas de estilo */
-/* Estilo general de la web */
+/* Estilo del body de la web app */
 body {
-  background-image: url("./media/fondo1.png");
+  background-image: url('./media/fondo_login.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+
 }
 .show{
 display: block !important;
@@ -9,12 +14,13 @@ display: block !important;
 .hide{
 display: none !important;
 }
-/* Estilo a Login */
+/* Estilo a Login  */
 #login {
   margin: 22rem;
   padding: 1rem;
   text-align: center;
 }
+/* Estilo caja de texto para palabra secreta */
 #password {
   width: 50%;
   text-align: center;
@@ -25,7 +31,7 @@ display: none !important;
   border-radius: 4px;
 }
 /* Estilo a botón entrar*/
-#boton_entrar {
+#botonEntrar {
   border-radius: 50px;
   padding: 10px 24px;
   background-color: #d1c6c6;
@@ -34,8 +40,18 @@ display: none !important;
   border-radius: 8px;
   color: white;
 }
-/* Estilo a segunda pantalla quehacer*/
-#queHacer {
+/* Estilo a pantallas*/
+#primeraPantallaOpciones {
+  margin: 15rem;
+  padding: 3rem;
+}
+#segundaPantallaOpcionCifrar{
+  margin: 10rem;
+  padding: 3rem;
+}
+
+
+#segundaPantallaOpcionDescfrar{
   margin: 15rem;
   padding: 3rem;
 }
@@ -46,7 +62,7 @@ h1 {
   font-size: 20px;
 }
 /* Estilo a botón cifrar*/
-#hideButton {
+#opcionCifrar {
   border-radius: 50px;
   padding: 10px 24px;
   background-color: #d1c6c6;
@@ -56,7 +72,7 @@ h1 {
   color: white;
 }
 /* Estilo a botón cifrar*/
-#discoverButton {
+#opcionDescifrar {
   border-radius: 50px;
   padding: 10px 24px;
   background-color: #d1c6c6;
@@ -66,13 +82,29 @@ h1 {
   color: white;
 }
 /* Estilo a tercera pantalla con agregar datos*/
-#writeMessage {
+#terceraPantallaResultados {
   margin: 10rem;
   padding: 0rem;
   text-align: center;
 }
+#textoParaCifrar{
+  margin: 10rem;
+  padding: 0rem;
+  text-align: center;
+  width: 60%;
+  height: 100px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
 /* Estilo a caja de texto*/
-#name {
+#mensajeADescifrar {
+  margin: 10rem;
+  padding: 0rem;
+  text-align: center;
   width: 60%;
   height: 100px;
   padding: 12px 20px;
@@ -83,23 +115,54 @@ h1 {
   resize: none;
 }
 /* Estilo a combobox número de desplazamiento*/
-#desplazamiento {
+#desplazamiento1 {
+  margin: 0rem;
+  padding: 0rem;
+  text-align: center;
+}
+
+#desplazamiento2 {
+  margin: 0rem;
+  padding: 0rem;
+  text-align: center;
 }
 /* Estilo a botón enviar*/
-#codificar {
+#enviarACifrar {
   border-radius: 50px;
   padding: 10px 24px;
   background-color: #d1c6c6;
-  margin-bottom: 10px;
+  margin-bottom: 4px;
   border-color: #ffffff;
   border-radius: 8px;
   color: white;
 }
 /* Estilo a cuarta pantalla con resultado*/
-#textoResultado {
+#enviarADescifrar {
   margin: 26rem;
   padding: 1rem;
   text-align: center;
+}
+/* Estilo a caja resultado con texto a cifrar o descifrar*/
+#terceraPantallaResultados{
+  width: 60%;
+  height: 100px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+ 
+}
+/* Estilo a caja de texto con resultado */
+#cajaResultadoCifrado{
+  width: 50%;
+  text-align: center;
+  padding: 5px 12px;
+  margin: 10px 5;
+  box-sizing: border-box;
+  border: 2 px solid blueviolet;
+  border-radius: 4px;
 }
 /* Estilo a botón copiar*/
 #copyText {
@@ -113,7 +176,7 @@ h1 {
 }
 
 /* Estilo a botón olvidar*/
-#borrarTexto {
+#regresarLogin {
   border-radius: 40px;
   padding: 10px 24px;
   background-color: #d1c6c6;
@@ -124,4 +187,5 @@ h1 {
 }
 footer {
   background: white;
+  position: absolute;
 }
