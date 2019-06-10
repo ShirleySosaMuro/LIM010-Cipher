@@ -15,55 +15,51 @@
   </head>
   <body>
     <main> 
-      <!--Pantalla de Login  -->     
+      <!--Pantalla de Login donde se verifica la clave secreta  -->     
      <section id='login'>
         <input type='password' placeholder= '🦄 Palabra secreta' id='palabraSecreta' class='input-48'/>
-        <button type='submit' id='botonEntrar' class='btn-primary' > entrar </button>
+        <button type='submit' id='btnEntrar' class='btn-primary' > entrar </button>
      </section>
     </form>
     </main>
-
-    <main>
-      <!--Página de Acciones:Cifrar o descifrar-->
-       <section id='primeraPantallaOpciones' class='hide'>
+     <!--primera pantalla: puede elegir entre ocultar (cifrar) y revelar (descifrar)-->
+    <main>      
+      <section id='primeraPantalla' class='hide'>
             <h1>¿Qué quieres hacer?</h1>
-            <!--ELegir que quiero hacer en la web app-->
-            <button name='cifrar' type='button' id='opcionCifrar' class='btn-primary'> ocultar  </button>
-            <button
-              name='descifrar'  type='button' id='opcionDescifrar' class='btn-success'> revelar </button>
+            <!--botones para elegir entre ocultar (cifrar) y revelar (descifrar)-->
+            <button type='button' id='btnCifrar' > ocultar  </button>
+            <button type='button' id='btnDescifrar' > revelar </button>
             <br /><br />
-        </section>
-        
-
-      <!--segunda pantalla que te permite CIFRAR-->
+        </section>      
     </main>
+     <!--Segunda pantalla que te permite ocultar(CIFRAR)-->
     <main>
-    <section id='segundaPantallaOpcionCifrar'class='hide'>
-     <!--caja de texto de mensaje a Cifrar-->
-      <input type='text' id='textoParaCifrar' placeholder='escribe tu secreto'/>
+    <section id='segundaPantallaCifrar'class='hide'>
+     <!-- input de texto donde se escribe lo que se quiere cifrar-->
+      <input type='text' id='textoParaCifrar' placeholder='oculta tu secreto'/>
       <br>
-      <input type='number' min='1' max='26'id='desplazamiento1'/>
+      <input type='number' min='1' max='26'id='desplazamientoCifrar'/>
       </select>
-      <button  type='button' id='cifrarTexto' class='btn-primary'>  enviar </button>
+      <button  type='button' id='btnQueProcesaCifrado' class='btn-primary'> enviar </button>
     </section>
     </main>
-  </main>
   <main>
-  <section id='segundaPantallaOpcionDescifrar'class='hide'>
-    <!--caja de texto de mensaje a Cifrar-->
-    <input type='text' id='descifrarTextor' placeholder='revela el secreto' />
+    <!--Segunda pantalla que te permite revelar(DESCIFRAR)-->
+  <section id='segundaPantallaDescifrar'class='hide'>
+    <!--input de texto donde se escribe lo que se quiere descifrar-->
+    <input type='text' id='textoParaDescifrar' placeholder='revela el secreto' />
     <br>
-    <input type='number' min='1' max='26'id='desplazamiento2'/>
+    <input type='number' min='1' max='26'id='desplazamientoDescifrar'/>
      </select>
-    <button  type='button' id='enviarADescifrar' class='btn-primary'>  enviar </button>
+    <button  type='button' id='btnQueProcesaDescifrado' class='btn-primary'>  enviar </button>
   </section>
   </main>
-    <!--Pantalla con los resultados y los botones de copiar y olvidar (lleva a login y borra datos) -->
+    <!--tercera pantalla con los resultados, ya sea que se eligió ocultar (cifrar) o descifrar(revelar) -->
     <main>
-    <section id='terceraPantallaResultados'class='hide'>
+    <section id='terceraPantallaConResultados'class='hide'>
     <input type='text'  id='cajaResultado'/>    
-    <button id='copyText' class='btn-primary'> Copiar  </button>
-    <button id='regresarLogin' class='btn-success'>  Olvidar </button>
+    <button id='copyText' class='btn-primary'> copiar  </button>
+    <button type='reset'id='volverLogin'> olvidar </button>
     </main>
   </section>
     <footer>

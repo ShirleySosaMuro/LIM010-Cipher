@@ -1,19 +1,27 @@
 window.cipher = {
-  encode: (offset, string) => {
-    /* Acá va tu código que cifra*/
+  encode: (desplazamientoCifrar, textoParaCifrar) => {
+    /* Acá va tu código que cifra MAYÚSCULAS*/
     let solved = '';
-    for (let i =0;i< string.length;i++) {
-      const ascNum = string[i].charCodeAt();
-      if(ascNum>=65 && ascNum <=90);
-      const code = ((ascNum - 65) + (parseInt(offset))) % 26+ 65;
-      solved += String.fromCharCode(code);
-      return solved
+    for(let i =0;i< textoParaCifrar.length;i++) {
+      const ascNum = textoParaCifrar[i].charCodeAt();
+      if(ascNum>=65 && ascNum <=90){
+      const code = ((ascNum - 65) + (parseInt(desplazamientoCifrar))) % 26+ 65;
+      solved+= String.fromCharCode(code);
       }
-
+      
     }
-  };
-  
-  decode: (offset,string)=>{
+    return solved;
+  }, 
+  decode: (desplazamientoDescifrar,textoParaDescifrar)=>{
     /* Acá va tu código que cifra*/
-  };
- 
+    let decipher = '';
+    for(let i =0;i< textoParaDescifrar.length;i++) {
+      const ascNum = textoParaDescifrar[i].charCodeAt();
+      if(ascNum>=65 && ascNum <=90){
+      const code = ((ascNum + 65) - (parseInt(desplazamientoDescifrar))) % 26 + 65;
+      decipher+= String.fromCharCode(code);
+      }
+    }
+    return decipher;
+  }
+};

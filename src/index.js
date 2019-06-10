@@ -1,77 +1,80 @@
-// VARIABLES PANTALLAS: login, primera pantalla con las opciones, segunda pantalla y tercera pantalla //
-const passwordValida = 'LABORATORIA';
-const primeraPantalla = document.getElementById('primeraPantallaOpciones');
-const segundaPantallaCifrar = document.getElementById('segundaPantallaOpcionCifrar');
-const segundaPantallaDescifrar = document.getElementById('segundaPantallaOpcionDesCifrar');
-const terceraPantallaResultadoFinal = document.getElementById('terceraPantallaResultados');
-const resultadoFinal=document.getElementById('enviarACifrar');
+// Variables: login, primera pantalla con las opciones, segunda pantalla y tercera pantalla //
+const passwordCorrecta = 'LABORATORIA';
+const primeraPantalla = document.getElementById('primeraPantalla');
+const segundaPantallaCifrar = document.getElementById('segundaPantallaCifrar');
+const segundaPantallaDescifrar = document.getElementById('segundaPantallaDescifrar');
+const terceraPantallaConResultados = document.getElementById('terceraPantallaConResultados');
+const btnqueProcesaCifrado = document.getElementById('btnQueProcesaCifrado');
+const btnqueProcesaDescifrado = document.getElementById('btnQueProcesaDescifrado');
+const btnOcultar = document.getElementById('btnCifrar');
+const btnDescifrar = document.getElementById('btnDescifrar');
+const desplazamientoCifrar = document.getElementById('desplazamientoCifrar');
+const textoParaCifrar = document.getElementById('textoParaCifrar');
+const desplazamientoDescifrar = document.getElementById('desplazamientoDescifrar');
+const textoParaDescifrar = document.getElementById('textoParaDescifrar');
 
-
-
-//evento de login y verificación de clave//
-const pantallaInicio = document.getElementById('login');
+const textoCifrado = document.getElementById('cajaResultado');
+const copyText=document.getElementById('copyText');
+const volverLogin = document.getElementById('volverLogin');
+//pantalla de login, evento de verificación de clave//
+const login = document.getElementById('login');
 let nroIntentos = 0;
 const validar = () => {
   const password = document.getElementById('palabraSecreta');
-  if (password.value === passwordValida) {
+  if (password.value === passwordCorrecta) {
     login.classList.add('hide');
     primeraPantalla.classList.replace('hide', 'show');
-    //RECUERDA y agregar en style el GIF//
-    document.body.style.backgroundImage =
-      'url(./media/fondo_shoutr_animado.gif)';
-    //RECUERDA que debo cambiar el console log por una looltip//
+    //¡AVISO! Recuerda cambiar esto a style//
+    document.body.style.backgroundImage ='url(./media/fondo_shoutr_animado.gif)';
+    //¡AVISO! Debo cambiar el console log por una looltip//
   } else {
     if (nroIntentos < 2) {
       console.log('ERROR');
       password.value = '';
       nroIntentos++;
-      //RECUERDA que debo cambiar el console log por una looltip ERROR. Prueba más tarde//
+      //¡AVISO! Debo cambiar el console log por una looltip//
     } else {
-
-      console.log('Creeemos que no eres tú. Inténtalo más tarde.');   
-          
+      console.log('Creeemos que no eres tú. Inténtalo más tarde.');
     }
   }
 };
-//evento dar click al botón y entrar a la primeraPantalla //
-const botonLogin = document.getElementById('botonEntrar');
-botonLogin.addEventListener('click', validar);
-
-//dar click en botón OCULTAR y te mande a segundaPantallaCifrar  //
-const botonCifrar = document.getElementById('opcionCifrar');
-opcionCifrar.addEventListener('click', () => {
+//dar click para pasar a la primeraPantalla //
+const btnEntrar = document.getElementById('btnEntrar');
+btnEntrar.addEventListener('click', validar);
+//en la primeraPantalla hay dos botones: ocultar (cifrar) y revelar (descifrar)//
+//evento dar click en ocultar (cifrar)//
+btnOcultar.addEventListener('click', () => {
   primeraPantalla.classList.add('hide');
-  segundaPantallaCifrar.classList.replace('hide', 'show');
+  segundaPantallaCifrar.classList.replace('hide','show');
 });
-//¡NO ME SALE!dar click en botón REVELAR y te mande a segundaPantallaDescifrar   //
-//const botonDescifrar = document.getElementById('opcionDescifrar');
-//opcionDescifrar.addEventListener('click', () => {
-  //primeraPantalla.classList.add('hide');
-  //segundaPantallaDesCifrar.classList.replace('hide','show');
-//dar click en botón enviarDESCIFRAR y te lleve a la pantalla final con el resultado  
-//const botonEnviarDescifrar = document.getElementById('enviarADescifrar');
-  //enviarADescifrar.addEventListener('click', () => {
-  //segundaPantallaOpcionDesCifrar.classList.add('hide');
-  //terceraPantallaResultados.classList.replace('hide', 'show')//
-
-  // CODIGO CIFRAR //
-
-
-
-
- const cifrarFinal = document.getElementById('cifrarTexto');
-  cifrarFinal.addEventListener('click', ()=> {
-  const mensajeCifrado= window.cipher.encode(desplazamiento1.value,textoParaCifrar.value);
- 
- })
- 
-//(funcion de copiar texto AUN NO ME SALE//
-
-
+//cuando eliges el botón ocultar (cifrar) te manda a la segundaPantallaCifrar donde se podrá escribir el texto que posteriormente se cifrará //
+btnQueProcesaCifrado.addEventListener('click', () => {
+  const resultado = cipher.encode(desplazamientoCifrar.value,textoParaCifrar.value);
+  console.log(resultado);
+  cajaResultado.value= resultado;
+  segundaPantallaCifrar.classList.add('hide');
+  terceraPantallaConResultados.classList.replace('hide','show');
+});
+//evento dar click en revelar (descifrar)//
+btnDescifrar.addEventListener('click', () => {
+  primeraPantalla.classList.add('hide');
+  segundaPantallaDescifrar.classList.replace('hide','show');
+});
+//cuando eliges el botón revelar (descifrar) te manda a la segundaPantallaDescifrar donde se podrá escribir el texto que posteriormente se descifrará //
+btnQueProcesaDescifrado.addEventListener('click', () => {
+  const resultado2 = cipher.decode(desplazamientoDescifrar.value,textoParaDescifrar.value);
+  console.log(resultado2);
+  cajaResultado.value= resultado2;
+  segundaPantallaDescifrar.classList.add('hide');
+  terceraPantallaConResultados.classList.replace('hide','show');
+});
+//funcion de copiar texto AUN NO ME SALE//
+copyText.addEventListener('click',()=>{
+  cajaResultado.select();
+  document.execCommand('copy');     
+  });
 //funcion de volver a LOGIN y PONER  borrar datos//
-
-const regresarAInicio = document.getElementById('regresarLogin');
-  regresarLogin.addEventListener('click', () => {
-  terceraPantallaResultados.classList.add('hide');
+volverLogin.addEventListener('click', () => {
+  terceraPantallaConResultados.classList.add('hide');
   login.classList.replace('hide', 'show');
-});
+  });
