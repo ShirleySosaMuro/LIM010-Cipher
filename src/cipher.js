@@ -7,6 +7,8 @@ window.cipher = {
       if(ascNum>=65 && ascNum <=90){
       const code = ((ascNum - 65) + (parseInt(desplazamientoCifrar))) % 26+ 65;
       solved+= String.fromCharCode(code);
+      }else if (asciiNum === 32) {
+				solved += ' ';
       }
       
     }

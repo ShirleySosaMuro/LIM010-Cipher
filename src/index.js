@@ -12,7 +12,7 @@ const desplazamientoCifrar = document.getElementById('desplazamientoCifrar');
 const textoParaCifrar = document.getElementById('textoParaCifrar');
 const desplazamientoDescifrar = document.getElementById('desplazamientoDescifrar');
 const textoParaDescifrar = document.getElementById('textoParaDescifrar');
-
+const alert=document.getElementById('alert');
 const textoCifrado = document.getElementById('cajaResultado');
 const copyText=document.getElementById('copyText');
 const volverLogin = document.getElementById('volverLogin');
@@ -35,6 +35,8 @@ const validar = () => {
       //¡AVISO! Debo cambiar el console log por una looltip//
     } else {
       console.log('Creeemos que no eres tú. Inténtalo más tarde.');
+      alert.classList.add('hide');
+      alert.classList.replace('hide','show');
     }
   }
 };
@@ -76,5 +78,7 @@ copyText.addEventListener('click',()=>{
 //funcion de volver a LOGIN y PONER  borrar datos//
 volverLogin.addEventListener('click', () => {
   terceraPantallaConResultados.classList.add('hide');
+  cajaResultado.value='';
+  palabraSecreta.value='';
   login.classList.replace('hide', 'show');
   });
