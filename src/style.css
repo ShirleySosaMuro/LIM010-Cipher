@@ -1,5 +1,4 @@
-/* Acá van tus reglas de estilo */
-body{
+body {
   margin: 0 auto;
   background-image: url('./media/fondo_login.svg');
   background-repeat: no-repeat;
@@ -10,120 +9,113 @@ body{
 .fondologin{
   background-image: url('./media/fondo_login.svg');
 }
-.fondo2{
-  background-image:url('./media/fondo_shoutr_animado.gif');
+.fondoweb {
+  background-image: url('./media/fondo_shoutr_animado.gif');
 }
-.show{
+.show {
   display: block !important;
 }
-.hide{
- display: none !important;
+.hide {
+  display: none !important;
 }
-/* Estilo a section Login */
 #login {
   width: 420px;
   height: 320px;
-  top:250px;
+  top: 250px;
   left: 34%;
   position: relative;
   box-sizing: border-box;
   padding: 30px 30px;
 }
-/* Estilo a input texto para ingresar palabra secreta */
-#palabraSecreta {
+#palabra-secreta {
   font-family: 'Poppins', sans-serif;
   font-size: 1.25rem;
   text-align: center;
-  margin-top: 20px;  
+  margin-top: 20px;
   width: 265px;
   height: 40px;
   border: solid #d1c6c6 2px;
   border-radius: 4px;
 }
-/* Estilo a botón entrar*/
-#btnEntrar {
-  font-family: 'Poppins', sans-serif;  
+#btn-entrar {
+  font-family: 'Poppins', sans-serif;
   font-size: 1.1rem;
   color: #ffffff;
   background-color: #d1c6c6;
   border-color: #b29cb5;
-  border-radius: 10px;  
+  border-radius: 10px;
   border: 1px solid;
   width: 68px;
   height: 42px;
   display: inline-block;
   text-decoration: none;
 }
-#btnEntrar:hover {
+#btn-entrar:hover {
   background-color: #b29cb5;
   color: #ffffff;
 }
-/* Estilo de párrafo*/
 h1 {
-  margin-top:300px;
+  margin-top: 300px;
   font-family: Helvetica;
-  color:#f8ed82;
+  color: #f8ed82;
   font-size: 1.875rem;
   text-align: center;
 }
-/* Estilo a botón cifrar*/
-#btnCifrar {
+#btn-cifrar {
   margin: 0 auto;
   font-family: 'Poppins', sans-serif;
   font-size: 1.2rem;
-  color: #ffffff;  
-  text-align: center;  
+  color: #ffffff;
+  text-align: center;
   border-radius: 8px;
   margin-left: 485px;
   background-color: #d1c6c6;
   margin-bottom: 100px;
   border-color: #ffffff;
-  color: white; 
+  color: white;
   height: 50px;
-  width:  150px;
+  width: 150px;
   display: inline-block;
   line-height: 50px;
 }
-#btnCifrar:hover {
+#btn-cifrar:hover {
   background-color: #b29cb5;
   color: #ffffff;
 }
-#botonesCifrar{
+#botones-cifrar {
   text-align: center;
   margin-top: 6px;
   margin-left: auto;
   margin-right: auto;
 }
-#btnDescifrar{
+#btn-descifrar {
   margin: 0 auto;
   font-family: 'Poppins', sans-serif;
   font-size: 1.2rem;
-  color: #ffffff;  
-  text-align: center;  
+  color: #ffffff;
+  text-align: center;
   border-radius: 8px;
   margin-left: 5px;
   background-color: #d1c6c6;
   margin-bottom: 100px;
   border-color: #ffffff;
-  color: white; 
+  color: white;
   height: 50px;
-  width:  150px;
+  width: 150px;
   display: inline-block;
   line-height: 50px;
 }
-
-#btnDescifrar:hover {
+#btn-descifrar:hover {
   background-color: #b29cb5;
   color: #ffffff;
 }
-#botonesDescifrar{
+#botones-descifrar {
   text-align: center;
   margin-top: 6px;
   margin-left: auto;
   margin-right: auto;
 }
-/* Estilo a tercera pantalla con agregar datos*/
-.textos{
+.textos {
   margin-top: 295px;
   margin-left: 295px;
   padding: 0rem;
@@ -139,27 +131,23 @@ h1 {
   background-color: #f8f8f8;
   resize: none;
 }
-/* Estilo a combobox número de desplazamiento*/
-h2{
-  margin-top: 2px;
+h2 {
   text-align: center;
-  font-family:'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 1.2rem;
   color: #99839b;
   display: inline;
 }
-.nroDesplazamiento{
-  margin-top: 2px;
+.nro-desplazamiento {
   margin-left: 3px;
   text-align: center;
   border-radius: 2px;
   display: inline;
 }
-/* Estilo a botón enviar*/
-.btnprocesador { 
+.btn-procesador {
   font-family: 'Poppins', sans-serif;
   font-size: 1.1rem;
-  margin-top:6px;
+  margin-top: 6px;
   border-radius: 8px;
   padding: 5px 20px;
   background-color: #d1c6c6;
@@ -169,13 +157,12 @@ h2{
   text-align: center;
   width: 120px;
   margin-left: 580px;
-  
 }
-.btnprocesador:hover {
+.btn-procesador:hover {
   background-color: #b29cb5;
   color: #ffffff;
 }
-.textosFinales{
+.textos-finales {
   margin-top: 295px;
   margin-left: 295px;
   padding: 0rem;
@@ -190,15 +177,14 @@ h2{
   border-radius: 4px;
   background-color: #f8f8f8;
   resize: none;
- }
-/* Estilo a botón copiar*/
-#botonesFinales{
+}
+#botones-finales {
   text-align: center;
   margin-top: 6px;
   margin-left: auto;
   margin-right: auto;
 }
-#copyText {
+#copy-text {
   font-family: 'Poppins', sans-serif;
   font-size: 1.15rem;
   border-radius: 50px;
@@ -209,14 +195,13 @@ h2{
   color: white;
   height: 50px;
   line-height: 50px;
-  width:  150px;
+  width: 150px;
 }
-#copyText:hover {
+#copy-text:hover {
   background-color: #b29cb5;
   color: #ffffff;
 }
-/* Estilo a botón olvidar*/
-#volverLogin {
+#volver-login {
   font-family: 'Poppins', sans-serif;
   font-size: 1.15rem;
   border-radius: 40px;
@@ -227,18 +212,17 @@ h2{
   color: white;
   height: 50px;
   line-height: 50px;
-  width:  150px;
- }
- #volverLogin:hover {
+  width: 150px;
+}
+#volver-login:hover {
   background-color: #b29cb5;
   color: #ffffff;
 }
-#alert{
+#alert {
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
-  color: rgb(248, 188, 21);
+  color: rgb(248, 150, 21);
   text-align: center;
-
 }
 footer {
   background-color: #99839b;

@@ -1,83 +1,58 @@
 <!DOCTYPE html>
-<html lang='en' dir='ltr'>
+<html lang="en" dir="ltr">
   <head>
-    <meta charset='UTF-8' />
-    <!--fondo de pantalla-->
-    <link
-      rel='icon'
-      type='image/jpg'
-      href='C:\Users\Lenovo\Downloads\git\cipher\LIM010-Cipher\src\media\\favicon_tittle.ico'
-    />
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/jpg" href="C:/Users/Lenovo/Downloads/git/cipher/LIM010-Cipher/src/media/favicon_tittle.ico">
     <title>Shoutr.com</title>
-    <meta name='viewport' content='width=device-width', initial-scale=1.0 />
-    <meta http-equiv='X-UA-Compatible' content='ie=edge' />
-    <link rel='stylesheet' href='style.css'>
-    <link href='https://fonts.googleapis.com/css?family=Gentium+Book+Basic|PT+Sans|Poppins|Raleway&display=swap' rel='stylesheet'>   
-    
+    <meta name="viewport" content="width=device-width" initial-scale="1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic|PT+Sans|Poppins|Raleway&display=swap" rel="stylesheet">   
   </head>
   <body>
     <header></header>
     <main> 
-      <!--Pantalla de Login donde se verifica la clave secreta  -->     
-      <section id='login'>
-        <input type='password' placeholder= '🦄 Tu palabra secreta' id='palabraSecreta' class='input-48' required/>      
-        <button type='submit' id='btnEntrar' class='btn-primary' > entrar </button>
-        <p id='alert' class='hide'> ✋ Creemos que no eres tú. Por favor intenta más tarde.⚠️ </p>
+       <section id="login">
+         <input type="password" placeholder= "🦄 Tu palabra secreta" id="palabra-secreta" class="input-48" required/> 
+         <button type="submit" id="btn-entrar" class="btn-primary">entrar</button>
+         <p id="alert" class="hide"> ✋ Creemos que no eres tú. Por favor intenta más tarde.⚠️ </p>
        </section>
-      <!--primera pantalla: puede elegir entre ocultar (cifrar) y revelar (descifrar)-->  
-      <section id='primeraPantalla' class='hide'>
-        <h1>¿Qué quieres hacer?</h1>
-        <!--botones para elegir entre ocultar (cifrar) y revelar (descifrar)-->
-        <button type='button' id='btnCifrar'class='botonesOpciones' > ocultar  </button>
-        <button type='button' id='btnDescifrar' class='botonesOpciones'> revelar </button>
-        <p></p>
+       <section id="primera-pantalla" class="hide">
+         <h1>¿Qué quieres hacer?</h1>
+         <button type="button" id="btn-cifrar" class="botones-opciones"> ocultar </button>
+         <button type="button" id="btn-descifrar" class="botones-opciones"> revelar </button>
+         <p></p>
       </section>      
-    
-     <!--Segunda pantalla que te permite ocultar(CIFRAR)-->
-    
-     <section id='segundaPantallaCifrar'class='hide'>
-     <!-- input de texto donde se escribe lo que se quiere cifrar-->
-      <input type='text' id='textoParaCifrar' class='textos' placeholder='oculta tu secreto'/>
-       <p></p>
-       <div id='botonesCifrar'>
-        <h2> clave </h2>
-        <input type='number' min='1' max='26'id='desplazamientoCifrar' class='nroDesplazamiento'/>
-       </div>
-      </select>
-       <button  type='button' id='btnQueProcesaCifrado' class='btnprocesador'> enviar </button>
-     </section>
-    
-    <!--Segunda pantalla que te permite revelar(DESCIFRAR)-->
-    <section id='segundaPantallaDescifrar'class='hide'>
-    <!--input de texto donde se escribe lo que se quiere descifrar-->
-      <input type='text' id='textoParaDescifrar' class='textos' placeholder='revela el secreto' />
-      <p></p>
-     <div id='botonesDescifrar'>
-        <h2> clave </h2>
-      <input type='number' min='1' max='26'id='desplazamientoDescifrar' class='nroDesplazamiento'/>
-     </div>
-     </select>
-    <button  type='button' id='btnQueProcesaDescifrado' class='btnprocesador'>  enviar </button>
-    
-  </section>
-  
-    <!--tercera pantalla con los resultados, ya sea que se eligió ocultar (cifrar) o descifrar(revelar) -->
-    
-    <section id='terceraPantallaConResultados'class='hide'>
-    <input type='text'  id='cajaResultado' class='textosFinales' /> 
-    <div id='botonesFinales'>   
-    <button id='copyText' class='btn-primary'> copiar  </button>
-    <button type='reset'id='volverLogin'> olvidar </button>
-    </div>
-    </section>
+      <section id="segunda-pantalla-cifrar" class="hide">
+         <input type="text" id="texto-para-cifrar" class="textos" placeholder="oculta tu secreto"/>
+         <p></p>
+         <div id="botones-cifrar">
+            <h2> clave </h2>
+            <input type="number" min="1" max="26" id="desplazamiento-cifrar" class="nroDesplazamiento"/>
+        </div>
+        <button type="button" id="btn-que-procesa-cifrado" class="btn-procesador"> enviar </button>
+      </section>
+      <section id="segunda-pantalla-descifrar" class="hide">
+         <input type="text" id="texto-para-descifrar" class="textos" placeholder="revela el secreto" />
+         <p></p>
+         <div id="botones-descifrar">
+           <h2> clave </h2>
+           <input type="number" min="1" max="26" id="desplazamiento-descifrar" class="nro-desplazamiento"/>
+         </div>
+         <button  type="button" id="btn-que-procesa-descifrado" class="btn-procesador">  enviar </button>
+      </section>
+      <section id="tercera-pantalla-con-resultados" class="hide">
+         <input type="text"  id="caja-resultado" class="textos-finales" /> 
+         <div id="botones-finales">   
+           <button id="copy-text" class="btn-primary"> copiar  </button>
+           <button type="reset" id="volver-login"> olvidar </button>
+         </div>
+      </section>
     </main>
     <footer>
       <p> 🌈 Shoutr.com </p>
-    </footer>
-    
-    
-    <script type='text/javascript' src='index.js'></script>
-    <script src='cipher.js'></script>
+    </footer>  
+    <script type="text/javascript" src="index.js"></script>
+    <script src="cipher.js"></script>
   </body>
-
 </html>

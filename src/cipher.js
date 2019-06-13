@@ -7,10 +7,9 @@ window.cipher = {
       if(ascNum>=65 && ascNum <=90){
       const code = ((ascNum - 65) + (parseInt(desplazamientoCifrar))) % 26+ 65;
       solved+= String.fromCharCode(code);
-      }else if (asciiNum === 32) {
+      }else if (ascNum === 32) {
 				solved += ' ';
       }
-      
     }
     return solved;
   }, 
@@ -22,6 +21,8 @@ window.cipher = {
       if(ascNum>=65 && ascNum <=90){
       const code = ((ascNum + 65) - (parseInt(desplazamientoDescifrar))) % 26 + 65;
       decipher+= String.fromCharCode(code);
+      }else if (ascNum === 32) {
+				decipher += ' ';
       }
     }
     return decipher;

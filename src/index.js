@@ -1,84 +1,78 @@
-// Variables: login, primera pantalla con las opciones, segunda pantalla y tercera pantalla //
 const passwordCorrecta = 'LABORATORIA';
-const primeraPantalla = document.getElementById('primeraPantalla');
-const segundaPantallaCifrar = document.getElementById('segundaPantallaCifrar');
-const segundaPantallaDescifrar = document.getElementById('segundaPantallaDescifrar');
-const terceraPantallaConResultados = document.getElementById('terceraPantallaConResultados');
-const btnqueProcesaCifrado = document.getElementById('btnQueProcesaCifrado');
-const btnqueProcesaDescifrado = document.getElementById('btnQueProcesaDescifrado');
-const btnOcultar = document.getElementById('btnCifrar');
-const btnDescifrar = document.getElementById('btnDescifrar');
-const desplazamientoCifrar = document.getElementById('desplazamientoCifrar');
-const textoParaCifrar = document.getElementById('textoParaCifrar');
-const desplazamientoDescifrar = document.getElementById('desplazamientoDescifrar');
-const textoParaDescifrar = document.getElementById('textoParaDescifrar');
-const alert=document.getElementById('alert');
-const textoCifrado = document.getElementById('cajaResultado');
-const copyText=document.getElementById('copyText');
-const volverLogin = document.getElementById('volverLogin');
-//pantalla de login, evento de verificación de clave//
+const primeraPantalla = document.getElementById('primera-pantalla');
+const segundaPantallaCifrar = document.getElementById('segunda-pantalla-cifrar');
+const segundaPantallaDescifrar = document.getElementById('segunda-pantalla-descifrar');
+const terceraPantallaConResultados = document.getElementById('tercera-pantalla-con-resultados');
+const btnQueProcesaCifrado = document.getElementById('btn-que-procesa-cifrado');
+const btnQueProcesaDescifrado = document.getElementById('btn-que-procesa-descifrado');
+const btnOcultar = document.getElementById('btn-cifrar');
+const btnDescifrar = document.getElementById('btn-descifrar');
+const desplazamientoCifrar = document.getElementById('desplazamiento-cifrar');
+const textoParaCifrar = document.getElementById('texto-para-cifrar');
+const desplazamientoDescifrar = document.getElementById('desplazamiento-descifrar');
+const textoParaDescifrar = document.getElementById('texto-para-descifrar');
+const alert = document.getElementById('alert');
+const cajaResultado = document.getElementById('caja-resultado');
+const copyText = document.getElementById('copy-text');
+const volverLogin = document.getElementById('volver-login');
+const palabraSecreta = document.getElementById('palabra-secreta');
+const btnEntrar = document.getElementById('btn-entrar');
 const login = document.getElementById('login');
 let nroIntentos = 0;
 const validar = () => {
-  const password = document.getElementById('palabraSecreta');
-  if (password.value === passwordCorrecta) {
+   if (palabraSecreta.value === passwordCorrecta) {
     login.classList.add('hide');
     primeraPantalla.classList.replace('hide', 'show');
-    //¡AVISO! Recuerda cambiar esto a style//
     document.body.style.backgroundImage ='url(./media/fondo_shoutr_animado.gif)';
-    //¡AVISO! Debo cambiar el console log por una looltip//
   } else {
     if (nroIntentos < 2) {
-      console.log('ERROR');
-      password.value = '';
-      nroIntentos++;
-      //¡AVISO! Debo cambiar el console log por una looltip//
+      palabraSecreta.value = '';
+      nroIntentos++;      
     } else {
-      console.log('Creeemos que no eres tú. Inténtalo más tarde.');
       alert.classList.add('hide');
-      alert.classList.replace('hide','show');
+      alert.classList.replace('hide', 'show');
     }
   }
 };
-//dar click para pasar a la primeraPantalla //
-const btnEntrar = document.getElementById('btnEntrar');
 btnEntrar.addEventListener('click', validar);
-//en la primeraPantalla hay dos botones: ocultar (cifrar) y revelar (descifrar)//
-//evento dar click en ocultar (cifrar)//
 btnOcultar.addEventListener('click', () => {
   primeraPantalla.classList.add('hide');
-  segundaPantallaCifrar.classList.replace('hide','show');
+  segundaPantallaCifrar.classList.replace('hide', 'show');
 });
-//cuando eliges el botón ocultar (cifrar) te manda a la segundaPantallaCifrar donde se podrá escribir el texto que posteriormente se cifrará //
 btnQueProcesaCifrado.addEventListener('click', () => {
-  const resultado = cipher.encode(desplazamientoCifrar.value,textoParaCifrar.value);
-  console.log(resultado);
-  cajaResultado.value= resultado;
+  const resultado = cipher.encode(
+  desplazamientoCifrar.value,
+  textoParaCifrar.value
+  );
+cajaResultado.value = resultado;
   segundaPantallaCifrar.classList.add('hide');
-  terceraPantallaConResultados.classList.replace('hide','show');
+  terceraPantallaConResultados.classList.replace('hide', 'show');
 });
-//evento dar click en revelar (descifrar)//
 btnDescifrar.addEventListener('click', () => {
   primeraPantalla.classList.add('hide');
-  segundaPantallaDescifrar.classList.replace('hide','show');
+  segundaPantallaDescifrar.classList.replace('hide', 'show');
 });
-//cuando eliges el botón revelar (descifrar) te manda a la segundaPantallaDescifrar donde se podrá escribir el texto que posteriormente se descifrará //
 btnQueProcesaDescifrado.addEventListener('click', () => {
-  const resultado2 = cipher.decode(desplazamientoDescifrar.value,textoParaDescifrar.value);
-  console.log(resultado2);
-  cajaResultado.value= resultado2;
+  const resultado2 = cipher.decode(
+  desplazamientoDescifrar.value,
+  textoParaDescifrar.value
+  );
+cajaResultado.value = resultado2;
   segundaPantallaDescifrar.classList.add('hide');
-  terceraPantallaConResultados.classList.replace('hide','show');
+  terceraPantallaConResultados.classList.replace('hide', 'show');
 });
-//funcion de copiar texto AUN NO ME SALE//
-copyText.addEventListener('click',()=>{
+copyText.addEventListener('click', () => {
   cajaResultado.select();
-  document.execCommand('copy');     
-  });
-//funcion de volver a LOGIN y PONER  borrar datos//
+  document.execCommand('copy');
+});
 volverLogin.addEventListener('click', () => {
   terceraPantallaConResultados.classList.add('hide');
-  cajaResultado.value='';
-  palabraSecreta.value='';
+  cajaResultado.value = '';
+  palabraSecreta.value = '';
+  textoParaCifrar.value = '';
+  desplazamientoCifrar.value = '';
+  textoParaDescifrar.value = '';
+  desplazamientoDescifrar.value = '';
   login.classList.replace('hide', 'show');
-  });
+  document.body.style.backgroundImage ='url(./media/fondo_login.svg)';
+});
