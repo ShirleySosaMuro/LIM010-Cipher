@@ -20,14 +20,14 @@ const btnEntrar = document.getElementById('btn-entrar');
 const login = document.getElementById('login');
 let nroIntentos = 0;
 const validar = () => {
-   if (palabraSecreta.value === passwordCorrecta) {
+  if (palabraSecreta.value === passwordCorrecta) {
     login.classList.add('hide');
     primeraPantalla.classList.replace('hide', 'show');
     document.body.style.backgroundImage ='url(./media/fondo_shoutr_animado.gif)';
   } else {
     if (nroIntentos < 2) {
       palabraSecreta.value = '';
-      nroIntentos++;      
+      nroIntentos++;
     } else {
       alert.classList.add('hide');
       alert.classList.replace('hide', 'show');
@@ -40,11 +40,8 @@ btnOcultar.addEventListener('click', () => {
   segundaPantallaCifrar.classList.replace('hide', 'show');
 });
 btnQueProcesaCifrado.addEventListener('click', () => {
-  const resultado = cipher.encode(
-  desplazamientoCifrar.value,
-  textoParaCifrar.value
-  );
-cajaResultado.value = resultado;
+  const resultado = cipher.encode(desplazamientoCifrar.value,textoParaCifrar.value);
+  cajaResultado.value = resultado;
   segundaPantallaCifrar.classList.add('hide');
   terceraPantallaConResultados.classList.replace('hide', 'show');
 });
@@ -54,10 +51,10 @@ btnDescifrar.addEventListener('click', () => {
 });
 btnQueProcesaDescifrado.addEventListener('click', () => {
   const resultado2 = cipher.decode(
-  desplazamientoDescifrar.value,
-  textoParaDescifrar.value
+    desplazamientoDescifrar.value,
+    textoParaDescifrar.value
   );
-cajaResultado.value = resultado2;
+  cajaResultado.value = resultado2;
   segundaPantallaDescifrar.classList.add('hide');
   terceraPantallaConResultados.classList.replace('hide', 'show');
 });
@@ -74,5 +71,5 @@ volverLogin.addEventListener('click', () => {
   textoParaDescifrar.value = '';
   desplazamientoDescifrar.value = '';
   login.classList.replace('hide', 'show');
-  document.body.style.backgroundImage ='url(./media/fondo_login.svg)';
+  document.body.style.backgroundImage = 'url(./media/fondo_login.svg)';
 });
