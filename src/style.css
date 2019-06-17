@@ -8,6 +8,9 @@ body {
   width: 100%;
   height: auto;
 }
+.logoshoutr{
+  background-position: center;
+}
 .fondologin{
   background-image: url('./media/fondo_login.svg');
 }
